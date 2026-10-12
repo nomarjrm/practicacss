@@ -1,0 +1,408 @@
+@import "tailwindcss";
+/* 1. Reset Básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #f1f1f1;
+}
+
+/* 2. Estilos del Header Fijo */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: space-between; /* Mantiene las 3 secciones bien distribuidas */
+  align-items: center;
+  padding: 0 16px;
+  z-index: 100;
+  border: 1px solid rgba(14, 10, 10, 0);
+}
+
+.svg-icono {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+/* 3. Estilos comunes para botones con iconos */
+.icono-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icono-btn:hover {
+  background-color: #272727;
+}
+
+/* 4. Sección Izquierda */
+.header-seccion-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0; /* Evita que el logo se aplaste al encoger la ventana */
+}
+
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  position: relative;
+  padding: 18px 14px 18px 16px;
+}
+
+.youtube-logo {
+  width: 93px;
+  height: 20px;
+  display: block;
+}
+
+#youtube-paths_yt7 {
+  fill: #ffffff;
+}
+
+.logo-region {
+  color: #aaa;
+  font-size: 10px;
+  margin-left: 2px;
+  margin-top: -3px;
+}
+
+/* 5. Sección Centro (El Buscador) */
+.header-seccion-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 728px;
+  margin: 0 16px;
+}
+
+.caja-busqueda {
+  width: 100%;
+  display: flex;
+}
+
+.barra-busqueda {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #121212;
+  border: 1px solid #303030;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+}
+
+.barra-busqueda::placeholder {
+  color: #888888;
+}
+
+.barra-busqueda:focus {
+  border-color: #1c62b9;
+}
+
+.btn-buscar {
+  height: 40px;
+  width: 64px;
+  background-color: #222222;
+  border: 1px solid #303030;
+  border-left: none;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.btn-buscar:hover {
+  background-color: #272727;
+}
+
+.btn-microfono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #222222;
+  border: none;
+  margin-left: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.btn-microfono:hover {
+  background-color: #272727;
+}
+
+/* 6. Sección Derecha */
+.header-seccion-derecha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 1;
+}
+
+/* Botón "+ Crear" tipo píldora */
+.btn-crear {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #272727;
+  border: none;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 18px;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-crear:hover {
+  background-color: #3f3f3f;
+}
+
+.svg-icono-crear {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.foto-perfil {
+  width: 32px;
+  height: 32px;
+  background-color: #5c2612;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Laptops pequeñas y Tablets */
+@media (max-width: 850px) {
+  .btn-crear span {
+    display: none;
+  }
+  .btn-crear {
+    padding: 0;
+    width: 36px;
+    justify-content: center;
+  }
+}
+
+/* Dispositivos Móviles (Teléfonos) */
+@media (max-width: 650px) {
+  .barra-busqueda,
+  .btn-microfono {
+    display: none; /* En móviles oculta el campo de texto y micrófono */
+  }
+
+  .caja-busqueda {
+    max-width: none;
+    flex: initial;
+  }
+
+  .btn-buscar {
+    border-radius: 50%; /* Pone el botón de la lupa en forma circular */
+    border: none;
+    background-color: transparent;
+    width: 40px;
+  }
+
+  .header-seccion-centro {
+    justify-content: flex-end; /* Alinea la lupa hacia la derecha */
+    margin: 0;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 56px); 
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  padding: 12px;
+  z-index: 90;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: #717171;
+}
+
+.sidebar-seccion {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebar-item:hover {
+  background-color: #272727;
+}
+
+.sidebar-item.active {
+  background-color: #272727;
+  font-weight: 500;
+}
+
+.sidebar-divisor {
+  border: none;
+  border-top: 1px solid #3f3f3f;
+  margin: 12px 0;
+}
+
+.sidebar-titulo-seccion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.sidebar-titulo-seccion:hover {
+  background-color: #272727;
+}
+
+.svg-icono-flecha {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}   
+
+.sidebar-item span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-encabezado-titulo {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 12px 4px 12px;
+  margin: 0;
+}
+
+.icono-rojo {
+  fill: #ff0000;
+}
+
+.sidebar {
+  overflow-y: hidden;
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+  .sidebar .sidebar-item:hover,
+.sidebar .sidebar-titulo-seccion:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer;
+}
+
+.sidebar .sidebar-item.active {
+  background-color: #272727;
+}
+
+.sidebar-item,
+.sidebar-titulo-seccion {
+  transition: background-color 0.15s ease-in-out;
+}
+
+.sidebar-footer {
+  padding: 12px 12px 24px 12px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  margin-bottom: 12px;
+}
+
+.sidebar-links a {
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.sidebar-links a:hover {
+  color: #f1f1f1;
+}
+
+sidebar-copyright {
+  color: #717171;
+  font-size: 12px;
+  margin-top: 8px;
+}

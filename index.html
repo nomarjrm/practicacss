@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="practicando sobre como usar el css" />
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- BARRA SUPERIOR (HEADER) -->
+    <header class="header">
+      <!-- Seccion 1: izquierda -->
+      <div class="header-seccion-izquierda">
+        <button class="icono-btn" title="Menú">
+          <svg viewBox="0 0 24 24" class="svg-icono">
+            <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+          </svg>
+        </button>
+
+        <a href="#" class="logo-container" title="Página principal de YouTube">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="yt-ringo2-svg_yt7"
+            width="93"
+            height="20"
+            viewBox="0 0 93 20"
+            focusable="false"
+            aria-hidden="true"
+            class="youtube-logo"
+          >
+            <g>
+              <path
+                d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z"
+                fill="#FF0033"
+              ></path>
+              <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
+            </g>
+            <g id="youtube-paths_yt7" fill="#FFFFFF">
+              <path
+                d="M37.1384 18.8999V13.4399L40.6084 2.09994H38.0184L36.6984 7.24994C36.3984 8.42994 36.1284 9.65994 35.9284 10.7999H35.7684C35.6584 9.79994 35.3384 8.48994 35.0184 7.22994L33.7384 2.09994H31.1484L34.5684 13.4399V18.8999H37.1384Z"
+              ></path>
+              <path
+                d="M44.1003 6.29994C41.0703 6.29994 40.0303 8.04994 40.0303 11.8199V13.6099C40.0303 16.9899 40.6803 19.1099 44.0403 19.1099C47.3503 19.1099 48.0603 17.0899 48.0603 13.6099V11.8199C48.0603 8.44994 47.3803 6.29994 44.1003 6.29994ZM45.3903 14.7199C45.3903 16.3599 45.1003 17.3899 44.0503 17.3899C43.0203 17.3899 42.7303 16.3499 42.7303 14.7199V10.6799C42.7303 9.27994 42.9303 8.02994 44.0503 8.02994C45.2303 8.02994 45.3903 9.34994 45.3903 10.6799V14.7199Z"
+              ></path>
+              <path
+                d="M52.2713 19.0899C53.7313 19.0899 54.6413 18.4799 55.3913 17.3799H55.5013L55.6113 18.8999H57.6012V6.53994H54.9613V16.4699C54.6812 16.9599 54.0312 17.3199 53.4212 17.3199C52.6512 17.3199 52.4113 16.7099 52.4113 15.6899V6.53994H49.7812V15.8099C49.7812 17.8199 50.3613 19.0899 52.2713 19.0899Z"
+              ></path>
+              <path
+                d="M62.8261 18.8999V4.14994H65.8661V2.09994H57.1761V4.14994H60.2161V18.8999H62.8261Z"
+              ></path>
+              <path
+                d="M67.8728 19.0899C69.3328 19.0899 70.2428 18.4799 70.9928 17.3799H71.1028L71.2128 18.8999H73.2028V6.53994H70.5628V16.4699C70.2828 16.9599 69.6328 17.3199 69.0228 17.3199C68.2528 17.3199 68.0128 16.7099 68.0128 15.6899V6.53994H65.3828V15.8099C65.3828 17.8199 65.9628 19.0899 67.8728 19.0899Z"
+              ></path>
+              <path
+                d="M80.6744 6.26994C79.3944 6.26994 78.4744 6.82994 77.8644 7.73994H77.7344C77.8144 6.53994 77.8744 5.51994 77.8744 4.70994V1.43994H75.3244L75.3144 12.1799L75.3244 18.8999H77.5444L77.7344 17.6999H77.8044C78.3944 18.5099 79.3044 19.0199 80.5144 19.0199C82.5244 19.0199 83.3844 17.2899 83.3844 13.6099V11.6999C83.3844 8.25994 82.9944 6.26994 80.6744 6.26994ZM80.7644 13.6099C80.7644 15.9099 80.4244 17.2799 79.3544 17.2799C78.8544 17.2799 78.1644 17.0399 77.8544 16.5899V9.23994C78.1244 8.53994 78.7244 8.02994 79.3944 8.02994C80.4744 8.02994 80.7644 9.33994 80.7644 11.7299V13.6099Z"
+              ></path>
+              <path
+                d="M92.6517 11.4999C92.6517 8.51994 92.3517 6.30994 88.9217 6.30994C85.6917 6.30994 84.9717 8.45994 84.9717 11.6199V13.7899C84.9717 16.8699 85.6317 19.1099 88.8417 19.1099C91.3817 19.1099 92.6917 17.8399 92.5417 15.3799L90.2917 15.2599C90.2617 16.7799 89.9117 17.3999 88.9017 17.3999C87.6317 17.3999 87.5717 16.1899 87.5717 14.3899V13.5499H92.6517V11.4999ZM88.8617 7.96994C90.0817 7.96994 90.1717 9.11994 90.1717 11.0699V12.0799H87.5717V11.0699C87.5717 9.13994 87.6517 7.96994 88.8617 7.96994Z"
+              ></path>
+            </g>
+          </svg>
+          <span class="logo-region">VE</span>
+        </a>
+      </div>
+
+      <!-- Seccion 2: Centro (Buscador) -->
+      <div class="header-seccion-centro">
+        <div class="caja-busqueda">
+          <input type="text" placeholder="Buscar" class="barra-busqueda" />
+        </div>
+        <button class="btn-buscar" title="Buscar">
+          <!-- Lupa corregida -->
+          <svg viewBox="0 0 24 24" class="svg-icono">
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            ></path>
+          </svg>
+        </button>
+        <button class="btn-microfono" title="Buscar con la voz">
+          <svg viewBox="0 0 24 24" class="svg-icono">
+            <path
+              d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zM17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sección 3: Derecha -->
+      <div class="header-seccion-derecha">
+        <button class="btn-crear" title="Crear">
+          <svg viewBox="0 0 24 24" class="svg-icono-crear">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+          </svg>
+          <span>Crear</span>
+        </button>
+        <button class="icono-btn" title="Notificaciones">
+          <svg viewBox="0 0 24 24" class="svg-icono">
+            <path
+              d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-3v-7c0-3.07-1.64-5.64-4.5-6.32V3c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C9.65 4.36 8 6.92 8 10v7l-2 2v1h16v-1l-2-2z"
+            ></path>
+          </svg>
+        </button>
+        <div class="foto-perfil">N</div>
+      </div>
+    </header>
+    <aside class="sidebar fixed left-0 top-14 h-[calc(100vh-3.5rem)] bg-[#0f0f0f] z-40 w-16 xl:w-[240px] transition-all duration-300 overflow-y-auto overflow-x-hidden flex flex-col py-3">
+  
+  <!-- SECCIÓN 1: Principal (Apilados en modo compacto, horizontales en PC) -->
+  <div class="sidebar-seccion flex flex-col gap-1 px-1 xl:px-3">
+    
+    <a href="#" class="sidebar-item flex flex-col xl:flex-row items-center xl:items-center justify-center xl:justify-start py-2.5 xl:py-3 px-1 xl:px-3 rounded-xl hover:bg-[#272727] text-white">
+      <svg class="svg-icono w-6 h-6 shrink-0" viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <span class="text-[10px] xl:text-sm font-normal mt-1 xl:mt-0 xl:ml-6">Inicio</span>
+    </a>
+
+    <a href="#" class="sidebar-item flex flex-col xl:flex-row items-center xl:items-center justify-center xl:justify-start py-2.5 xl:py-3 px-1 xl:px-3 rounded-xl hover:bg-[#272727] text-white">
+      <svg class="svg-icono w-6 h-6 shrink-0" viewBox="0 0 24 24">
+        <path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5 1.2-.5c1.08-.45 1.83-1.51 1.83-2.7 0-1.63-1.33-2.95-2.96-2.95-.56 0-1.08.15-1.52.42l-7.4 4.13c-.92.51-1.52 1.5-1.52 2.61 0 1.11.6 2.1 1.52 2.61l1.2.5-1.2.5c-1.08.45-1.83 1.51-1.83 2.7 0 1.63 1.33 2.95 2.96 2.95.56 0 1.08-.15 1.52-.42l7.4-4.13c.92-.51 1.52-1.5 1.52-2.61 0-1.11-.6-2.1-1.52-2.61z"/>
+      </svg>
+      <span class="text-[10px] xl:text-sm font-normal mt-1 xl:mt-0 xl:ml-6">Shorts</span>
+    </a>
+
+    <a href="#" class="sidebar-item flex flex-col xl:flex-row items-center xl:items-center justify-center xl:justify-start py-2.5 xl:py-3 px-1 xl:px-3 rounded-xl hover:bg-[#272727] text-white">
+      <svg class="svg-icono w-6 h-6 shrink-0" viewBox="0 0 24 24">
+        <path d="M10 18v-6l5 3-5 3zm7-15H7v1H4v1H1v14h22V4h-3V3h-3zm2 16H3V7h18v12zm-2-14v1H7V5h10z"/>
+      </svg>
+      <span class="text-[10px] xl:text-sm font-normal mt-1 xl:mt-0 xl:ml-6 text-center xl:text-left">Suscripciones</span>
+    </a>
+
+    <a href="#" class="sidebar-item flex flex-col xl:flex-row items-center xl:items-center justify-center xl:justify-start py-2.5 xl:py-3 px-1 xl:px-3 rounded-xl hover:bg-[#272727] text-white">
+      <svg class="svg-icono w-6 h-6 shrink-0" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78C15.57 19.33 13.86 20 12 20s-3.57-.67-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+      </svg>
+      <span class="text-[10px] xl:text-sm font-normal mt-1 xl:mt-0 xl:ml-6">Tú</span>
+    </a>
+
+  </div>
+
+  <hr class="sidebar-divisor hidden xl:block my-2" />
+
+  <!-- SECCIÓN 3: Explorar (Se oculta en modo compacto) -->
+  <div class="sidebar-seccion hidden xl:block">
+    <h3 class="sidebar-encabezado-titulo">Explorar</h3>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+      <span>Música</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      <span>Videojuegos</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V18H8v2h8v-2h-3v-2.1a5.01 5.01 0 003.61-3.96C19.08 11.63 21 9.55 21 7V5h-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+      <span>Deportes</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+      <span>Mostrar más</span>
+    </a>
+  </div>
+
+  <hr class="sidebar-divisor hidden xl:block" />
+
+  <!-- SECCIÓN 4: Más de YouTube (Se oculta en modo compacto) -->
+  <div class="sidebar-seccion hidden xl:block">
+    <h3 class="sidebar-encabezado-titulo">Más de YouTube</h3>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono icono-rojo" viewBox="0 0 24 24"><path d="M21.58 7.19a2.88 2.88 0 00-2.03-2.03C17.76 4.6 12 4.6 12 4.6s-5.76 0-7.55.56a2.88 2.88 0 00-2.03 2.03C1.86 8.98 1.86 12 1.86 12s0 3.02.56 4.81c.32.99 1.1 1.76 2.03 2.03C6.24 19.4 12 19.4 12 19.4s5.76 0 7.55-.56a2.88 2.88 0 002.03-2.03c.56-1.79.56-4.81.56-4.81s0-3.02-.56-4.81zM9.8 15.46V8.54l6.09 3.46-6.09 3.46z"/></svg>
+      <span>YouTube Premium</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono icono-rojo" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/></svg>
+      <span>YouTube Music</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono icono-rojo" viewBox="0 0 24 24"><path d="M21.58 7.19a2.88 2.88 0 00-2.03-2.03C17.76 4.6 12 4.6 12 4.6s-5.76 0-7.55.56a2.88 2.88 0 00-2.03 2.03C1.86 8.98 1.86 12 1.86 12s0 3.02.56 4.81c.32.99 1.1 1.76 2.03 2.03C6.24 19.4 12 19.4 12 19.4s5.76 0 7.55-.56a2.88 2.88 0 002.03-2.03c.56-1.79.56-4.81.56-4.81s0-3.02-.56-4.81zM9.8 15.46V8.54l6.09 3.46-6.09 3.46z"/></svg>
+      <span>YouTube Kids</span>
+    </a>
+  </div>
+
+  <hr class="sidebar-divisor hidden xl:block" />
+
+  <!-- SECCIÓN 5: Historial (Se oculta en modo compacto) -->
+  <div class="sidebar-seccion hidden xl:block">
+    <a href="#" class="sidebar-item">
+      <svg class="svg-icono" viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6z"/></svg>
+      <span>Historial de denuncias</span>
+    </a>
+  </div>
+
+  <hr class="sidebar-divisor hidden xl:block" />
+
+  <!-- SECCIÓN 6: Pie de página / Footer con Términos y Condiciones (Se oculta en modo compacto) -->
+  <div class="sidebar-footer hidden xl:block">
+    <div class="sidebar-links">
+      <a href="#">Información</a>
+      <a href="#">Prensa</a>
+      <a href="#">Derechos de autor</a>
+      <a href="#">Contactar</a>
+      <a href="#">Creadores</a>
+      <a href="#">Publicidad</a>
+      <a href="#">Desarrolladores</a>
+    </div>
+
+    <div class="sidebar-links">
+      <a href="#">Términos</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Política y seguridad</a>
+      <a href="#">Cómo funciona YouTube</a>
+      <a href="#">Probar funciones nuevas</a>
+    </div>
+
+    <div class="sidebar-copyright">
+      © 2026 Google LLC
+    </div>
+  </div>
+
+</aside>
+  <main class="ml-16 xl:ml-[240px] mt-14 p-4 transition-all duration-300">
+    <div class="flex overflow-hidden gap-3">
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Todo</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Musica</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Juegos</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Podcast</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Futbol</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Barcelona</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Messi</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Mixes</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Copa Mundial</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">Michael Jackson</button>
+      <button class="bg-[#272727] text-white px-4 py-1.5 rounded-lg text-sm font-medium">FC</button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-6 items-start">
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/0IIHIdvlHMo/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLDb0diM9aahB5iaj8z5awalrIhuXw" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCoujnJOgUXRj6UW2Wec9Fi6sLGpXu15kWZJHsImGpXg&s=10" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          EL BARCELONA NO SE ENFRIA y vuelve a GOLEAR tras el PARON para mantener su ...
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">ESPN Deportes</span>
+        <span class="text-xs text-[#aaa]">62K vistas • hace 32 min</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="ytCoreImageHost ytCoreImageFillParentHeight ytCoreImageFillParentWidth ytCoreImageContentModeScaleAspectFill ytCoreImageLoaded" alt="" src="https://i.ytimg.com/vi/P9ptGfdcmqA/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLA2ANfvl9lJsa0Jaizu9zaEem_BWA">
+    
+    <div class="flex gap-3">
+      <img src="https://static.wikia.nocookie.net/rap/images/2/25/NuevologoRedbullbatalla.png/revision/latest?cb=20240219211916&path-prefix=es" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          Mejores rimas Final Internacional 2019 | Red Bull Batalla de los Gallos
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">Red Bull Batalla</span>
+        <span class="text-xs text-[#aaa]">8,4M vistas • hace 6 a</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/cGjVN-AXT9Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDECfsMTCmnjGCNDUhTxO9x80kxYQ" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ1ISQ-mGSapGgfW4KHCr1FuLpFETDsICq07J8V9YR5A&s=10" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          Spider-Man Brand New Day: CURIOSIDADES - The Top Comics
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">The Top Comics</span>
+        <span class="text-xs text-[#aaa]">71K vistas • hace 3 h</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/GKX_EeMCXns/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBFGz031EIN8wTQHZjW7hlgFuDdrg" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsaMjA4ZqM7w6lwvjuMWZbelt3bXFgCBlA613_TARyTQ&s=10" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          El 1er END & Friends en vivo desde Caracas: Salvador Perez
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">Escuela de Nada</span>
+        <span class="text-xs text-[#aaa]">184K vistas • Emitido hace 4 d</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/iT5E1j0J2Yc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLDM4GETyVQYaql6BF6G8OmzrN-0hw" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/e15d55ed-b3cb-459d-824b-8e298534ba2d-profile_image-300x300.png" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          LOS MEJORES NERFEOS DEL ANIME
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">Guibel Reviews</span>
+        <span class="text-xs text-[#aaa]">81K vistas • hace 4 m</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/sXkurPgJHX0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDrP8piRtl92dyQjDK6KoiQBaEhtw" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://yt3.googleusercontent.com/O6lYKqFZx8yaiGmdiiGrYPo8zforsJrxqNdCDfkzeWcqBYO5rOoiCPsZwGWKfyZlNXRUKZI0hQ=s900-c-k-c0x00ffffff-no-rj" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          Probe las Comidas Mas Raras del Mundo con Luisito Comunica
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">Ibai</span>
+        <span class="text-xs text-[#aaa]">10M vistas • hace 2 sem.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://i.ytimg.com/vi/8WH3DkiqCxM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBrnbbD9r7PBWb3XRJL8UTGa2ALfw" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://yt3.googleusercontent.com/JYLKuUWzCA10XDig6jVGT_76GNH7l2qw4p4nYDvFAgT653Vy4FF4-7QWv8nbww6eP_EbUYsNPtA=s900-c-k-c0x00ffffff-no-rj" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          No Te Ofendas/ Ep 156: Hablando con @akapellahh
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">No Te Ofendas</span>
+        <span class="text-xs text-[#aaa]">79K vistas • hace 7 d</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 cursor-pointer">
+    <!-- Miniatura -->
+    <img class="w-full h-auto rounded-xl object-cover" src="https://img.youtube.com/vi/YWlb1OMbmOQ/hq720.jpg" alt="Miniatura">
+    
+    <div class="flex gap-3">
+      <img src="https://i.pinimg.com/736x/0f/ed/7e/0fed7e8723a441e582be3bfc438bf293.jpg" alt="Avatar" class="w-9 h-9 rounded-full object-cover shrink-0">  
+      
+      <!-- Bloque de Textos -->
+      <div class="flex flex-col">
+        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">
+          Star Wars Saco Un Juego de Carreras...
+        </h3>
+        <span class="text-xs text-[#aaa] mt-1">Rubius Z</span>
+        <span class="text-xs text-[#aaa]">1.6 M vistas • hace 1 d</span>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  </body>
+</html>
